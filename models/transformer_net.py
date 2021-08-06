@@ -10,7 +10,7 @@ import torch.nn as nn
 
 class TransformerNet(nn.Module):
     def __init__(self):
-        super(FastNST, self).__init__()
+        super(TransformerNet, self).__init__()
         # Encoder Layer
         self.Encoder = nn.Sequential(
             ConvLayer(3, 32, 9, 1), nn.ReLU(),

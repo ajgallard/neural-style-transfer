@@ -8,7 +8,7 @@ from collections import namedtuple
 import torch.nn as nn
 from torchvision import models
 
-#using Vgg16
+# using Vgg16
 class VggNet(nn.Module):
     def __init__(self, requires_grad=False):
         super(VggNet, self).__init__()
@@ -21,7 +21,7 @@ class VggNet(nn.Module):
             self.slice1.add_module(str(x), vgg_pretrained_features)
         for x in range(4,9):
             self.slice2.add_module(str(x), vgg_pretrained_features)
-        for x in range(9,16)):
+        for x in range(9,16):
             self.slice3.add_module(str(x), vgg_pretrained_features)
         for x in range(16,23):
             self.slice4.add_module(str(x), vgg_pretrained_features)
@@ -38,6 +38,6 @@ class VggNet(nn.Module):
         relu3_3 = x
         x = self.slice4(x)
         relu4_3 = x
-        vgg_outputs = namedtuple("VggOutputs", self.layer_names)
+        vgg_outputs = namedtuple("VggOutputs", ['relu1_2', 'relu2_2', 'relu3_3', 'relu4_3'])
         out = vgg_outputs(relu1_2, relu2_2, relu3_3, relu4_3)
         return out
