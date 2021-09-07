@@ -186,14 +186,14 @@ def stylize(args):
 
     del content_image
 
-    if args.preserve != 0:
+    if args.histogram != 0:
         output_array = np.array(output[0])
         output_array = np.transpose(output_array, (1, 2, 0))
         content_image = utils.load_image(args.content_image, scale=args.content_scale)
         content_array = np.array(content_image)
-        output_preserve = match_histograms(output_array, content_array, multichannel=True)
-        img = Image.fromarray(output_preserve.astype("uint8"))
-        img.save(save_folder + '/' + str(model_name_segment) + '_' + str(content_name) + '_preserve.jpg')
+        output_histogram = match_histograms(output_array, content_array, multichannel=True)
+        img = Image.fromarray(output_histogram.astype("uint8"))
+        img.save(save_folder + '/' + str(model_name_segment) + '_' + str(content_name) + '_histogram.jpg')
     else:
         utils.save_image(save_folder + '/' + str(model_name_segment) + '_' + str(content_name) + '.jpg', output[0])
 
@@ -248,8 +248,8 @@ def main():
                                  help="saved model to be used for stylizing the image. If file ends in .pth - PyTorch path is used")
     eval_arg_parser.add_argument("--cuda", type=int, required=True,
                                  help="set it to 1 for running on GPU, 0 for CPU")
-    eval_arg_parser.add_argument("--preserve", type=int, default=0,
-                                 help="preserve input image coloration through histogram matching")
+    eval_arg_parser.add_argument("--histogram", type=int, default=0,
+                                 help="apply histogram matching to return aspects of the original input-image coloration")
 
     args = main_arg_parser.parse_args()
 
