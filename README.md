@@ -18,7 +18,7 @@ I implemented a few modifications to suit my personal use case. Many models
 were created but sadly not all of them were worthy of being included in the repo.
 
 ## Architecture Details
-*insert image here -- from architecture file*
+<img src="architecture_info/feed forward approach/fast_nst_architecture.png"/>
 
 There are a few details I'd like to mention specifically regarding the design of this particular NST framework.
 Firstly, the original NST paper that started this entire sub-section of neural-networks was implemented as an optimization
@@ -38,10 +38,11 @@ If you try to run a Van Gogh piece other than starry night you may find yourself
 geometrically distinct characteristics with high-contrasting colors. NST seems to like bright, bold, and blockly style-images to work with rather than a more subdued image.
 
 ## Attributions
-Please take a look at the following repos to see the original sources of most of the code utilized here: 
+Please take a look at the following sources for code and other assets used in this repo: 
 * [rrmina/fast-neural-style-pytorch](https://github.com/rrmina/fast-neural-style-pytorch)
 * [gordicaleksa/pytorch-neural-style-transfer](https://github.com/gordicaleksa/pytorch-neural-style-transfer)
 * [pytorch/examples](https://github.com/pytorch/examples/tree/master/fast_neural_style)
+* [Architecture Image Source](https://towardsdatascience.com/neural-style-transfer-applications-data-augmentation-43d1dc1aeecc)
 
 ## Additional Resources
 * [Neural Style Tranfer Playlist by AI Epiphany](https://www.youtube.com/playlist?list=PLBoQnSflObcmbfshq9oNs41vODgXG-608)
