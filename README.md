@@ -1,5 +1,5 @@
 # Neural Style Transfer (Feed Forward Version)
-<img src="images/example/mona_lisa_nst.png" title="Example of NST"/>
+<img src="images/example/messi_tulip.jpg" width="800" height="350" title="Example of NST"/>
 
 The basic premise of Neural Style Transfer (NST) is to generate a new image 
 based on an art-piece and a standard photo. NST's try to create this image by utilizing a style-metric
