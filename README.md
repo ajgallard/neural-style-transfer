@@ -37,6 +37,12 @@ After running the script many times over, I've found that the model seems to per
 If you try to run a Van Gogh piece other than starry night you may find yourself disappointed in the results as a painting such as starry night contains those 
 geometrically distinct characteristics with high-contrasting colors. NST seems to like bright, bold, and blockly style-images to work with rather than a more subdued image.
 
+In regards to how the models itself improves across batches and epochs the cumulative content-style metric is not very informative as to how well the model is doing overall. Considering that the results themselves have no objective measure of being deemed a successful transplant of style onto content it is difficult to say a model is performing well. The subjectivity of art presents itself as a challenge here that may simply be unresolved.
+
+I personally attached a histogram matching element to the code to see how well I could reintroduce some of the content-images color elements back into the images. However, the histogram matching seemed to have mixed results. When applying histogram matching *after* having processed a new stylized-content-image the histogram-matched image tended to mostly lighten-up the images. Only when the stylized-image and the orginal content-image shared similar color palettes did the histogram-matching element seem to work well. If you want a particular resulting image it would probably be best to use the optimization approach rather than the feed-forward approach by applying the histogram-matching element priop to processing the images. You may also be able to try luminance mathcing as discussed in [Preserving Color in Neural Artistic Style Transfer](https://deepai.org/publication/preserving-color-in-neural-artistic-style-transfer)
+
+Lastly, if I had a better way to process these models I would have run them for more than 2 epochs. I believe the resulting images could have been improved significantly. However, as stated earlier, some style-images seemed to produce better results than others given the same number of epochs (at least subjectively). Still, I would have preferred to allocate more time and computational power to these models if they were available...
+
 ## Attributions
 Please take a look at the following sources for code and other assets used in this repo: 
 * [rrmina/fast-neural-style-pytorch](https://github.com/rrmina/fast-neural-style-pytorch)
