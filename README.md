@@ -52,4 +52,4 @@ Please take a look at the following sources for code and other assets used in th
 * [Example of NST Image Source](https://analyticsindiamag.com/hands-on-guide-to-neural-style-transfer-using-tensorflow-hub-module/)
 
 ## Additional Resources
-* [Neural Style Tranfer Playlist by AI Epiphany](https://www.youtube.com/playlist?list=PLBoQnSflObcmbfshq9oNs41vODgXG-608)
+* [Neural Style Transfer Playlist by AI Epiphany](https://www.youtube.com/playlist?list=PLBoQnSflObcmbfshq9oNs41vODgXG-608)
