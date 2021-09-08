@@ -17,8 +17,6 @@ Thanks to the open nature of GitHub I found a few repos that dealt with
 the implementation of NST's (repos listed in the "Sources" section).
 I implemented a few modifications to suit my personal use case. Many models
 were created but sadly not all of them were worthy of being included in the repo.
-However, I hope that the models I *have* included and their resulting images 
-are interesting to look at for you all.
 
 ## Architecture Details
 *insert image here -- from architecture file*
