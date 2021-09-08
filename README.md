@@ -1,7 +1,6 @@
 # Neural Style Transfer (Feed Forward Version)
 *insert image here*
 
-
 The basic premise of Neural Style Transfer (NST) is to generate a new image 
 based on an art-piece and a standard photo. NST's try to create this image by utilizing a style-metric
 and a content-metric. The style-metric attempts to capture the essence of an artistic work 
@@ -25,12 +24,18 @@ There are a few details I'd like to mention specifically regarding the design of
 Firstly, the original NST paper that started this entire sub-section of neural-networks was implemented as an optimization
 approach rather than the feed-forward approach implemented here [See the architecture folder for the both papers in .pdf format].
 
+One of the more interesting aspects regarding NST's generally is the way style is preserved from the style-image. It's all thanks
+to something called a "Gram Matrix". The Gram Matrix is able to capture the stylistic elements of an image by keeping track of the elements within feature maps
+that tend to activate together.
+
 ## Results
+Below are some example images from the models:
+*insert image here -- from results*
 
 ## Takeaways
 After running the script many times over, I've found that the model seems to perform better with more "geometrically-abstract" & high-contrast images.
 If you try to run a Van Gogh piece other than starry night you may find yourself disappointed in the results as a painting such as starry night contains those 
-geometrically distinct characteristics with high-contrasting colors.
+geometrically distinct characteristics with high-contrasting colors. NST seems to like bright, bold, and blockly style-images to work with rather than a more subdued image.
 
 ## Attributions
 Please take a look at the following repos to see the original sources of most of the code utilized here: 
