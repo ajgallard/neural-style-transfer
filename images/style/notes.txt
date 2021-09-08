@@ -1,5 +1,0 @@
-remove: 
-gogh
-pollock
-warhol
-monet
